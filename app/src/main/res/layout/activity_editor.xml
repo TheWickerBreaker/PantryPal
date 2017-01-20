@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Layout for the editor -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/noContentBackgroundColor"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".EditorActivity">
+
+    <!-- Overview category -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/hint_item_name" />
+
+        <!-- Item field -->
+        <EditText
+            android:id="@+id/edit_item"
+            style="@style/EditorFieldStyle"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:hint="@string/dashes" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Container Size Label-->
+        <TextView
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/hint_container_size" />
+
+        <!-- Serving Size Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/hint_serving_size" />
+
+        <!-- Servings Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/hint_servings" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Container Size field -->
+        <EditText
+            android:id="@+id/edit_container_size"
+            style="@style/EditorFieldStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/dashes"
+            android:inputType="number" />
+
+        <!-- Serving Size field -->
+        <EditText
+            android:id="@+id/edit_serving_size"
+            style="@style/EditorFieldStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/dashes"
+            android:inputType="number" />
+
+        <!-- Servings field -->
+        <EditText
+            android:id="@+id/edit_servings"
+            style="@style/EditorFieldStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/dashes"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <!-- Calories category -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/hint_calories" />
+
+        <!-- Item field -->
+        <EditText
+            android:id="@+id/edit_calories"
+            style="@style/EditorFieldStyle"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:hint="@string/dashes" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Protein Label-->
+        <TextView
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/hint_protein" />
+
+        <!-- Carbs Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/hint_carbs" />
+
+        <!-- Fat Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/hint_fat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Container Size field -->
+        <EditText
+            android:id="@+id/edit_protein"
+            style="@style/EditorFieldStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/dashes"
+            android:inputType="number" />
+
+        <!-- Serving Size field -->
+        <EditText
+            android:id="@+id/edit_carbs"
+            style="@style/EditorFieldStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/dashes"
+            android:inputType="number" />
+
+        <!-- Servings field -->
+        <EditText
+            android:id="@+id/edit_fat"
+            style="@style/EditorFieldStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/dashes"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <!-- Type category -->
+    <LinearLayout
+        android:id="@+id/container_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/hint_type" />
+
+        <!-- Input field -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <!-- Type drop-down spinner -->
+            <Spinner
+                android:id="@+id/spinner_type"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:paddingRight="16dp"
+                android:spinnerMode="dropdown"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+        </LinearLayout>
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/hint_location" />
+
+        <!-- Input field -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <!-- Gender drop-down spinner -->
+            <Spinner
+                android:id="@+id/spinner_location"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:paddingRight="16dp"
+                android:spinnerMode="dropdown"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/eat_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="eat"
+            android:text="@string/eat"
+            android:textColor="@color/noContentBackgroundColor"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/spoil_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="spoil"
+            android:text="@string/spoil"
+            android:textColor="@color/noContentBackgroundColor"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="add"
+            android:text="@string/add"
+            android:textColor="@color/noContentBackgroundColor"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+</LinearLayout>

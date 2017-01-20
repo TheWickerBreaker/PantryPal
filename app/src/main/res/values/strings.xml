@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Pantry Pal</string>
+    <string name="empty_view_title_text">Looks like you could use some food...</string>
+    <string name="empty_view_subtitle_text">Let\'s get started by adding an item or two...</string>
+    <string name="category_overview">Overview</string>
+    <string name="hint_item_name">Food Item</string>
+    <string name="hint_container_size">Container Size</string>
+    <string name="hint_serving_size">Serving Size</string>
+    <string name="hint_servings">Servings</string>
+
+    <string name="hint_calories">Calories Per Serving</string>
+    <string name="hint_protein">Protein</string>
+    <string name="hint_carbs">Carbs</string>
+    <string name="hint_fat">Fat</string>
+
+    <string name="hint_type">Type</string>
+    <string name="hint_location">Location</string>
+
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+    <string name="action_delete_all_entries">Delete All Inventory</string>
+    <string name="editor_activity_title_new_item">Add An Item</string>
+    <string name="editor_activity_title_edit_item_info">Edit Item Info</string>
+    <string name="dashes">--</string>
+
+    <string name="complete_meal">Complete Meal</string>
+    <string name="ingredient">Ingredient</string>
+    <string name="either_or">Either Or</string>
+    <string name="seasoning">Seasoning</string>
+
+    <string name="cupboard">Cupboard</string>
+    <string name="fridge">Fridge</string>
+    <string name="top_of_fridge">Top of Fridge</string>
+
+    <string name="editor_insert_item_failed">Error With Saving Food Item.</string>
+    <string name="editor_insert_item_successful">Food Item Saved.</string>
+
+
+    <string name="editor_update_item_successful">Food Item Updated</string>
+    <string name="editor_update_item_failed">Error With Updating Food Item</string>
+
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+
+    <string name="delete_dialog_msg">Delete This Food Item?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="editor_delete_item_successful">Food Item Deleted.</string>
+    <string name="editor_delete_item_failed">Error With Deleting Food Item.</string>
+    <string name="empty_pantry">Empty Pantry</string>
+    <string name="eat">Eat</string>
+    <string name="spoil">Spoil</string>
+    <string name="add">Add</string>
+    <string name="food_item">Food Item</string>
+    <string name="total_servings">Total Servings:</string>
+    <string name="total_calories">Total Calories:</string>
+
+</resources>
