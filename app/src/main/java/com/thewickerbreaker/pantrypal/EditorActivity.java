@@ -245,18 +245,19 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         String proteinEditText = mProteinEditText.getText().toString().trim();
         String carbsEditText = mCarbsEditText.getText().toString().trim();
         String fatEditText = mFatEditText.getText().toString().trim();
-        // Check if this is supposed to be a new item
-        // and check if all the fields in the editor are blank
-        if (mCurrentFoodUri == null &&
-                TextUtils.isEmpty(itemEditText) && TextUtils.isEmpty(containerSizeEditText) &&
-                TextUtils.isEmpty(servingSizeEditText) && TextUtils.isEmpty(servingsEditText)
-                && TextUtils.isEmpty(caloriesEditText) && TextUtils.isEmpty(proteinEditText)
-                && TextUtils.isEmpty(carbsEditText) && TextUtils.isEmpty(fatEditText)
-                && mType == FoodEntry.INGREDIENT && mLocation == FoodEntry.CUPBOARD) {
+
+        if (mCurrentFoodUri == null ||
+                TextUtils.isEmpty(itemEditText) || TextUtils.isEmpty(containerSizeEditText) ||
+                TextUtils.isEmpty(servingSizeEditText) || TextUtils.isEmpty(servingsEditText)
+                && TextUtils.isEmpty(caloriesEditText) || TextUtils.isEmpty(proteinEditText)
+                && TextUtils.isEmpty(carbsEditText) || TextUtils.isEmpty(fatEditText)) {
             // Since no fields were modified, we can return early without creating a new item.
             // No need to create ContentValues and no need to do any ContentProvider operations.
             return;
         }
+
+
+
         // Create a ContentValues object where column names are the keys,
         // and food item attributes from the editor are the values.
         ContentValues values = new ContentValues();
@@ -334,10 +335,24 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         switch (item.getItemId()) {
             // Respond to a click on the "Save" menu option
             case R.id.action_save:
+                // Check if this is supposed to be a new item
+                // and check if all the fields in the editor are blank
+           /*     if (mItemEditText.getText().toString().isEmpty() ||
+                        mContainerSizeEditText.getText().toString().isEmpty()||
+                        mServingSizeEditText.getText().toString().isEmpty() ||
+                        mServingsEditText.getText().toString().isEmpty()||
+                        mCaloriesEditText.getText().toString().isEmpty()||
+                        mProteinEditText.getText().toString().isEmpty()||
+                        mCarbsEditText.getText().toString().isEmpty()||
+                        mFatEditText.getText().toString().isEmpty()){
+                    Toast.makeText(this, "Please complete all details", Toast.LENGTH_SHORT).show();
+                }else {
+*/
                 // Save food item to database
                 saveFoodItem();
                 // Exit activity
                 finish();
+                //      }
                 return true;
             // Respond to a click on the "Delete" menu option
             case R.id.action_delete:

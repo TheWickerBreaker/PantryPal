@@ -10,14 +10,17 @@
     <TextView
         android:id="@+id/food_list_item"
         style="@style/CategoryStyle"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight=".75"
         android:gravity="center"
         android:text="@string/food_item"
         android:textSize="20sp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <LinearLayout
@@ -28,7 +31,8 @@
             <TextView
                 android:id="@+id/total_servings_lable"
                 style="@style/EditorFieldStyle"
-                android:layout_width="200dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/total_servings"
                 tools:ignore="RtlHardcoded" />
@@ -53,8 +57,9 @@
             <TextView
                 android:id="@+id/calories_lable"
                 style="@style/EditorFieldStyle"
-                android:layout_width="200dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/total_calories"
                 tools:ignore="RtlHardcoded" />
